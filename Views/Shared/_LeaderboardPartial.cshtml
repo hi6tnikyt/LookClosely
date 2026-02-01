@@ -1,0 +1,21 @@
+﻿@model IEnumerable<LookClosely.Models.Score>
+
+<h3>Top Scores</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var score in Model)
+        {
+            <tr>
+                <td>@score.User.Username</td>
+                <td>@score.Points</td>
+            </tr>
+        }
+    </tbody>
+</table>
